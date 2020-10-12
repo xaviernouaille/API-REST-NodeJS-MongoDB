@@ -8,7 +8,7 @@ exports.signin = async (req, res) => {
         const users = await AuthentService.signin(username, password)
         return res.status(200).json({ status: 200, data: users, message: "Success" })
     } catch (e) {
-        return res.status(400).json({ status: 403, message: e.message });
+        return res.status(403).json({ status: 403, message: e.message });
     }
 }
 
@@ -19,6 +19,6 @@ exports.signup = async (req, res) => {
         const user = await AuthentService.signup(name, lastname, username, password, confirm)
         return res.status(200).json({ status: 200, data: user, message: "Success" })
     } catch (e) {
-        return res.status(400).json({ status: 403, message: e.message });
+        return res.status(403).json({ status: 403, message: e.message });
     }
 }
