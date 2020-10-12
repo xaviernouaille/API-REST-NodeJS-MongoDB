@@ -2,10 +2,10 @@
 
 ## Routes
 
-```json GET: /users ``` GET all users
-```json GET: /users/:username ``` GET a specific user
-```json POST: /authent/signup ``` POST signup
-```json POST: /authent/signin ``` POST signin 
+GET: /users  GET all users
+GET: /users/:username GET a specific user
+POST: /authent/signup POST signup
+POST: /authent/signin POST signin 
 
 ## Commande / Installation
 
