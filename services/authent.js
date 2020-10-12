@@ -2,7 +2,6 @@ require('mongoose')
 const User = require('../models/user')
 const db = require('../config/database')
 const bCrypt = require('bcrypt')
-const { use } = require('../routes/user')
 
 exports.signin = async (username, password) => {
     try {
@@ -42,7 +41,7 @@ exports.signup = async (name, lastname, username, password, confirm) => {
                     const newUser = new User({
                         name: name,
                         lastname: lastname,
-                        username: username,
+                        username: username.toLowerCase(),
                         password: password
                     }).save()
                     return newUser
