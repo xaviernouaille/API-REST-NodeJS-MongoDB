@@ -2,7 +2,7 @@
 
 ## Routes
 
-``json
+```node
 GET: /users  GET all users
 GET: /users/:username GET a specific user
 POST: /authent/signup POST signup
