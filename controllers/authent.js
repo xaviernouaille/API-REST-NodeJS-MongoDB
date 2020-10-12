@@ -1,12 +1,15 @@
 const User = require('../models/user')
 const AuthentService = require('../services/authent')
+const jwt = require('jsonwebtoken')
+require('dotenv').config()
 
 exports.signin = async (req, res) => {
     const { username, password } = req.body
 
     try {
         const users = await AuthentService.signin(username, password)
-        return res.status(200).json({ status: 200, data: users, message: "Success" })
+        const token = jwt.sign({ token: users }, process.env.TOKEN_KEY, { expiresIn: '6h' })
+        return res.status(200).json({ status: 200, data: users, token: token, message: "Success" })
     } catch (e) {
         return res.status(403).json({ status: 403, message: e.message });
     }

@@ -2,6 +2,7 @@ require('mongoose')
 const User = require('../models/user')
 const db = require('../config/database')
 const bCrypt = require('bcrypt')
+const { use } = require('../routes/user')
 
 exports.signin = async (username, password) => {
     try {
@@ -12,7 +13,7 @@ exports.signin = async (username, password) => {
         else {
             const match = await bCrypt.compare(password, user.password)
             if (match) {
-                return user
+                return { name: user.name, lastname: user.lastname, username: user.username }
             } else {
                 throw 'Username or password are incorrect'
             }
