@@ -3,10 +3,47 @@
 ## Routes
 
 ```node
-GET: /users GET all users
-GET: /users/:username GET a specific user
-POST: /authent/signup POST signup
-POST: /authent/signin POST signin 
+GET all users
+GET: /users
+
+GET a specific user
+GET: /users/:username
+
+POST search user by username
+POST: /users/search
+  {
+    "username": "mbaguelin"
+  }
+
+POST signup
+POST: /authent/signup
+  {
+    "name": "Toto",
+    "lastname": "Bateau",
+    "username": "tBateau",
+    "password": "T@Bateau9",
+    "confirm": "T@Bateau9",
+    "private": true //posts can only be viewed by friends
+  }
+
+POST signin
+POST: /authent/signin
+  {
+  "username": "Toto"
+  "password": "T@Bateau9"
+  }
+
+POST new POST
+POST: /post/add
+  {
+  "file": "test"
+  }
+
+GET all Posts of a user
+GET: /post
+  {
+  "username": "tBateau"
+  }
 ```
 
 ## Commande / Installation
