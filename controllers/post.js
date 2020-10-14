@@ -1,9 +1,10 @@
 const Post = require('../models/post');
 const PostService = require('../services/post')
+const jwt = require('jsonwebtoken')
 
 exports.addPost = async (req, res) => {
-    // username = req.headers.token
-    const username = req.body.username
+    const decodedToken = jwt.decode(req.headers['authorization'].split(' ')[1])
+    const username = decodedToken.token.username
     const file = req.body.file
 
     try {
@@ -15,7 +16,6 @@ exports.addPost = async (req, res) => {
 }
 
 exports.getPosts = async (req, res) => {
-    // username = req.headers.token
     const username = req.body.username
 
     try {

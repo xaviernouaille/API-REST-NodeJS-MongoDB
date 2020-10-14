@@ -17,8 +17,8 @@ require('dotenv').config()
 
 const isAuthenticated = require('./isAuthenticated')
 
-app.use('/users', require('./routes/user'))
 app.use('/authent', require('./routes/authent'))
+app.use('/users', require('./routes/user'))
 app.use('/post', isAuthenticated, require('./routes/post'))
 
 const PORT = process.env.PORT
