@@ -1,4 +1,18 @@
 # API-REST-NodeJS-MongoDB
+Une API REST permettant de s'inscrire, se connecter, rechercher des utilisateurs et visionner leurs posts 
+
+## Technologies utilisées
+NodeJS & ExpressJS
+
+## Modules utilisés
+```json
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.9"
+```
 
 ## Routes
 
@@ -52,16 +66,6 @@ GET: /post
 npm install
 npm run start
 npm run dev
-```
-
-## Modules utilisés
-```json
-    "bcrypt": "^5.0.0",
-    "body-parser": "^1.19.0",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.10.9"
 ```
 
 ## Author
