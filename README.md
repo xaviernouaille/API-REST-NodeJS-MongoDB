@@ -42,5 +42,5 @@ npm run start
 npm run dev
 ```
 
-## Author
+## Auteur
 Xavier Nouaille, 2020
