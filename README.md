@@ -30,7 +30,7 @@ NodeJS & ExpressJS
 | `/users/search`      | {"username" : "toto42"} | retourne la listes des utilisateurs dont l'username commence par "toto42"
 | `/authent/signup`      | {"name": "Toto","lastname": "Bateau","username": "tBateau","password": "T@Bateau9","confirm": "T@Bateau9", "private": true //posts can only be viewed by friend} | Succès si les informations ne sont pas éronnés
 | `/users/signin`      | {"username" : "toto42", "password": "ROT13"} | Succès si les informations ne sont pas éronnés
-| `/post/add`         | {"username": "toto42"} | Retourne les posts crées par "toto42"
+| `/post`         | {"username": "toto42"} | Retourne les posts crées par "toto42"
 | `/post/add`          | {file": "myPicture.png"} | Succès si les informations ne sont pas éronnés
 ```
 
